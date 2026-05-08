@@ -20,7 +20,9 @@ jobs:
           flutter-version: '3.24.5'
 
       - name: Ricrea progetto Android
-        run: flutter create --project-name buco .
+        run: |
+           rm -rf android
+           flutter create --project-name buco .
 
       - name: Installa dipendenze
         run: flutter pub get
